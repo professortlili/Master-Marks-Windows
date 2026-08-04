@@ -1,3 +1,15 @@
-# Explicitly excluded as requested
+# Your explicit request
 Scorebook-win/
 Keygen-win/
+
+# Standard Node/Electron generated content
+node_modules/
+build/
+_backup_src/
+*.exe
+*.msi
+*.bak
+*.log
+
+# Optional
+package-lock.json
