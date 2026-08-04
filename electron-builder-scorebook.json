@@ -1,0 +1,83 @@
+{
+    "appId": "com.master.marks",
+    "productName": "Master Marks",
+    "copyright": "Copyright © 2025-2026 Professor TLILI Mohamed Lamine",
+    "directories": {
+        "output": "Scorebook-win"
+    },
+    "files": [
+        "index.html",
+        "script.js",
+        "style.css",
+        "activation-system.js",
+        "electron-main.js",
+        "preload.js",
+        "assets/**"
+    ],
+    "win": {
+        "target": [
+            {
+                "target": "nsis",
+                "arch": [
+                    "x64",
+                    "ia32"
+                ]
+            },
+            {
+                "target": "msi",
+                "arch": [
+                    "x64",
+                    "ia32"
+                ]
+            },
+            {
+                "target": "portable",
+                "arch": [
+                    "x64",
+                    "ia32"
+                ]
+            },
+            {
+                "target": "appx",
+                "arch": [
+                    "x64",
+                    "ia32"
+                ]
+            },
+            "dir"
+        ],
+        "icon": "assets/icon.ico",
+        "artifactName": "${productName}_v${env.APP_VERSION}_${arch}.${ext}"
+    },
+    "appx": {
+        "displayName": "Master Marks",
+        "identityName": "TLILI-dev.MasterMarks",
+        "publisher": "CN=B1D53BD5-08C9-4409-BDC5-1E6C36992CE2",
+        "publisherDisplayName": "TLILI-dev",
+        "applicationId": "MasterMarksApp",
+        "backgroundColor": "#ffffff",
+        "minVersion": "10.0.17763.0",
+        "maxVersionTested": "10.0.19041.0",
+        "artifactName": "${productName}_Store_v${env.APP_VERSION}_${arch}.msix"
+    },
+    "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "deleteAppDataOnUninstall": false,
+        "perMachine": true,
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "shortcutName": "دفتر التنقيط الالكتروني",
+        "installerIcon": "assets/icon.ico",
+        "uninstallerIcon": "assets/icon.ico",
+        "uninstallDisplayName": "دفتر التنقيط الالكتروني - حذف التثبيت",
+        "artifactName": "${productName}_Setup_v${env.APP_VERSION}_${arch}.${ext}"
+    },
+    "msi": {
+        "oneClick": false,
+        "perMachine": true,
+        "shortcutName": "Master-Marks",
+        "runAfterFinish": true,
+        "warningsAsErrors": false
+    }
+}
